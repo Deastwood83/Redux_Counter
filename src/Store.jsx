@@ -1,11 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit'
-import counterReducer from './features/counterSlice'
-import initialState from './features/todoSlice'
-
-
+import { configureStore } from "@reduxjs/toolkit";
+import counterReducer from "./features/counterSlice";
+import todoReducer from "./features/todoSlice";
 
 export const store = configureStore({
-    reducer: counterReducer,
-    todo: todoReducer
-})
-
+  reducer: {
+    counter: counterReducer,
+    todos: todoReducer,
+  },
+});
